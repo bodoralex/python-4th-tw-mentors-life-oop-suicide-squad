@@ -11,7 +11,7 @@ class Person():
             raise AttributeError
         else:
             self.last_name = last_name
-        if(year_of_birth == 0):
+        if(year_of_birth == 0 or type(year_of_birth) != int):
             raise AttributeError
         else:
             self.year_of_birth = year_of_birth
