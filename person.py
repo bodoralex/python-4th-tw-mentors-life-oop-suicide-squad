@@ -19,3 +19,5 @@ class Person():
             raise AttributeError
         else:
             self.gender = gender
+
+kaki = Person("first_name", "last_name", "year_of_birth", "female")

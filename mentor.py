@@ -7,7 +7,7 @@ class Mentor(Person):
 
     def __init__(self, first_name, last_name, year_of_birth, gender, nickname):
         self.nickname = nickname  # lekezelni
-        super(Person, self).__init__(
+        super().__init__(
             first_name, last_name, year_of_birth, gender)
 
     @classmethod
@@ -24,7 +24,7 @@ class Mentor(Person):
             first_name, last_name, year_of_birth, gender, nickname = row.split(
                 ",")
             cls.mentors.append(Mentor(first_name, last_name,
-                                      year_of_birth, gender, nickname))
+                                      year_of_birth, gender, nickname.strip()))
 
             # string = "{} = Mentor('{}', '{}', {}, '{}', '{}')".format(cls.variable_name_gen(
             # nickname), first_name, last_name, year_of_birth, gender, nickname.strip())
@@ -46,6 +46,7 @@ class Mentor(Person):
                 result += nickname[i]
         return result
 
-Mentor.create_by_csv("data//mentors.csv")
-print(Mentor.mentors[0])
-mentor_lacika = Mentor.find_mentor_by_full_name("Miklós Beöthy")
+# Mentor.create_by_csv("data//mentors.csv")
+# print(Mentor.mentors[0])
+# mentor_lacika = Mentor.find_mentor_by_full_name("Miklós Beöthy")
+kaki = Mentor("first_name", "last_name", "year_of_birth", "female", "nickname")
