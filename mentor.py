@@ -28,8 +28,9 @@ class Mentor(Person):
                                       int(year_of_birth), gender, nickname.strip()))
         file.close()
         print("Mentors are initialized from csv")
+        return Mentor.mentors
 
 
-Mentor.create_by_csv("data//mentors.csv")
+"""Mentor.create_by_csv("data//mentors.csv")
 print(Mentor.mentors)
-mentor_lacika = Mentor.find_mentor_by_full_name("Laci Juhász")
+mentor_lacika = Mentor.find_mentor_by_full_name("Laci Juhász")"""
