@@ -1,24 +1,25 @@
-class Person():
+from codecoolerror import CodecoolError
 
-    GENDERS = ('male', 'female', 'notsure')
 
-    def __init__(self, first_name=0, last_name=0, year_of_birth=0, gender=0):
-        if(first_name == 0):
-            raise AttributeError
-        else:
-            self.first_name = first_name
-        if(last_name == 0):
-            raise AttributeError
-        else:
-            self.last_name = last_name
-        if(year_of_birth == 0 or type(year_of_birth) != int):
-            raise AttributeError
-        else:
-            self.year_of_birth = year_of_birth
-        if(gender not in self.GENDERS):
-            raise AttributeError
-        else:
-            self.gender = gender
+class Person:
+
+    def __init__(self, first_name, last_name, year_of_birth, gender):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.year_of_birth = year_of_birth
+        self.gender = gender
+
+        if type(first_name) is not str:
+            raise CodecoolError("First name is not a string!")
+
+        if type(last_name) is not str:
+            raise CodecoolError("Last name is not a string!")
+
+        if type(year_of_birth) is not int:
+            raise CodecoolError("Year of birth is not an integer!")
+
+        if gender != "male" and gender != "female" and gender != "notsure":
+            raise CodecoolError("Gender is not valid!")
 
     @property
     def fullname(self):

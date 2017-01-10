@@ -1,0 +1,3 @@
+class CodecoolError(Exception):
+
+    pass
