@@ -8,10 +8,27 @@ class Student(Person):
 
     def __init__(self, first_name, last_name, year_of_birth, gender, knowledge_level):
         self.knowledge_level = knowledge_level
+        self._energy = 100
         super().__init__(first_name, last_name, year_of_birth, gender)
 
     def __str__(self):
         return self.last_name + " " + self.first_name
+
+    @property
+    def energy(self):
+        return self._energy
+
+    @energy.setter
+    def energy(self, value):
+        # if value != 100:
+        print("{}'s energy changed from {} to {}".format(
+            self.fullname, self._energy, value))
+        self._energy = value
+        if self._energy < 1:
+            print(self.fullname, "died because exhaustion")
+            for i in range(len(Student.students)):
+                if Student.students[i].fullname == self.fullname:
+                    Student.students.remove(Student.students[i])
 
     @classmethod
     def create_by_csv(cls, filename):
@@ -36,5 +53,10 @@ class Student(Person):
                 raise CodecoolError(full_name + " wasn't found in students.")
 
 
-"""Student.create_by_csv("data//students.csv")
-Student.find_student_by_full_name("Pisti Tóth")"""
+laci = Student("Laci", "Kovács", 1999, "male", 100)
+laci.energy += 1
+print("fasz")
+laci.energy += 1
+laci.energy += 1
+print(laci.energy)
+print(laci._energy)
