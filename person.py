@@ -20,4 +20,6 @@ class Person():
         else:
             self.gender = gender
 
-kaki = Person("first_name", "last_name", "year_of_birth", "female")
+    @property
+    def fullname(self):
+        return "{} {}".format(self.first_name, self.last_name)
