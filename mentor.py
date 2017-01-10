@@ -14,6 +14,7 @@ class Mentor(Person):
     def find_mentor_by_full_name(cls, full_name):
         for obj in cls.mentors:
             if obj.fullname == full_name:
+                print(full_name, "was found in mentors")
                 return obj
 
     @classmethod
@@ -32,4 +33,3 @@ class Mentor(Person):
 Mentor.create_by_csv("data//mentors.csv")
 print(Mentor.mentors)
 mentor_lacika = Mentor.find_mentor_by_full_name("Laci Juhász")
-print(mentor_lacika)
