@@ -15,6 +15,33 @@ Person class
 
 ## Class methods
 
+### ```create_by_csv```
+
+Reads in a list of students and returns it.
+
+#### Arguments
+
+filename
+
+
+#### Return value
+
+cls.students
+
+### ```find_student_by_full_name```
+
+Finds a student given its fullname.
+
+#### Arguments
+
+fullname
+
+
+#### Return value
+
+obj
+
+
 ## Instance methods
 
 ### ```__init__```
