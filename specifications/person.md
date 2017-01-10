@@ -44,6 +44,10 @@ None
 
 ### ```__init__```
 The constructor of the object.
+If first_name or last_name is not a string, raises Codecool Error 
+If last_name is not an int, raises Codecool Error
+If gender is not a string or not not male, female or notsure raises Codecool Error
+
 
 #### Arguments
 
