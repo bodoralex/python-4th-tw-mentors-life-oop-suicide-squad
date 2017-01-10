@@ -33,7 +33,7 @@ class Student(Person):
                 print(full_name, "was found in students.")
                 return obj
             else:
-                raise CodecoolError
+                raise CodecoolError(full_name + " wasn't found in students.")
 
 
 """Student.create_by_csv("data//students.csv")
