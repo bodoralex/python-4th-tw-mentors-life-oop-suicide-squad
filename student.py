@@ -25,11 +25,8 @@ class Student(Person):
                 self.fullname, self._energy, value))
         self._energy = value
         if self._energy < 1:
-            print(self.fullname, "died because exhaustion")
-            for i in range(len(Student.students)):
-                if Student.students[i].fullname == self.fullname:
-                    Student.students.remove(Student.students[i])
-                    break
+            print(self.fullname, "exhausted fatally.")
+            self.kill()
 
     @classmethod
     def create_by_csv(cls, filename):
@@ -52,3 +49,10 @@ class Student(Person):
                 return obj
             else:
                 raise CodecoolError(full_name + " wasn't found in students.")
+
+    def kill(self):
+        for i in range(len(Student.students)):
+            if Student.students[i].fullname == self.fullname:
+                print(self.fullname, "died")
+                Student.students.remove(Student.students[i])
+                break
