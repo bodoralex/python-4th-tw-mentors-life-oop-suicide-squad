@@ -16,18 +16,23 @@ class MorningRoutine:
             is_unlucky = random.randint(0, 1)
             if is_unlucky:
                 late_students.append(person)
-                accident = 1  # random.randint(0, 3)
+                accident = 2  # random.randint(0, 3)
                 if accident == 0:
                     cls.meets_ex_on_tram(person)
                 elif accident == 1:
-                    cls.bad_morning_(person)
+                    cls.bad_morning(person)
                 elif accident == 2:
-                    # késikmertkisiklik
-                    pass
+                    cls.twisted_ankle(person)
                 elif accident == 3:
                     # kibicsaklik
                     pass
-            elif random.randint(0, 10) == 10:
+            elif not is_unlucky and random.randint(1, 10) <= 10:
+                print(person.fullname, "listened to a podcast on the way to school.")
+                podcast = 30 + random.randint(-10, 10)
+                person.knowledge_level += podcast
+                print(person.fullname + "'s knowledge level increased by", str(podcast) + ".")
+
+            elif random.randint(1, 10) == 10:
                 print(person.fullname, "became a super saiyan.")
                 person.energy = 9001
             else:
@@ -36,14 +41,31 @@ class MorningRoutine:
 
     @classmethod
     def meets_ex_on_tram(cls, person):
-        print(person.fullname, "met his/her ex on the tram.")
+        if person.gender == "male":
+            print(person.fullname, "met his ex on the tram.")
+        if person.gender == "female":
+            print(person.fullname, "met her ex on the tram.")
+        if person.gender == "notsure":
+            print(person.fullname, "met its ex on the tram.")
+
         person.energy -= 33 + random.randint(-10, 10)
 
     @classmethod
-    def bad_morning_(cls, person):
+    def bad_morning(cls, person):
         print(person.fullname, "got out of bed on the wrong side.")
+
         person.energy -= 26 + random.randint(-10, 10)
 
+    @classmethod
+    def twisted_ankle(cls, person):
+        if person.gender == "male":
+            print(person.fullname, "twisted his ankle on his way to school.")
+        if person.gender == "female":
+            print(person.fullname, "twisted her ankle on her way to school.")
+        if person.gender == "notsure":
+            print(person.fullname, "twisted its ankle on its way to school.")
+
+        person.energy -= 50 + random.randint(-10, 10)
 
 kisclass = [Student("Laci", "Kovacs", 1992, "male", 11)]
 MorningRoutine.random_things(kisclass)
