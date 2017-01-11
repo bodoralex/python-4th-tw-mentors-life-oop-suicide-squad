@@ -12,3 +12,5 @@ This file should contain the description of your team's story to tell about a me
 #9.energize game
 #10.project
 #11.random
+
+#end of day csvbe kiírás

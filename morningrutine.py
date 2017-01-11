@@ -37,7 +37,7 @@ class MorningRoutine:
     @classmethod
     def meets_ex_on_tram(cls, person):
         print(person.fullname, "met his/her ex on the tram.")
-        person.energy -= 33 + random.randint(-10, 10)
+        person.energy -= 36 + random.randint(-10, 10)
 
     @classmethod
     def bad_morning_(cls, person):
@@ -46,4 +46,4 @@ class MorningRoutine:
 
 
 kisclass = [Student("Laci", "Kovacs", 1992, "male", 11)]
-MorningRoutine.random_things(kisclass)
+print(MorningRoutine.random_things(kisclass))

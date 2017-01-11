@@ -21,7 +21,7 @@ class Student(Person):
     @energy.setter
     def energy(self, value):
         if value != 100:
-            print("{}'s energy changed from {} to {}".format(
+            print("{}'s energy changed from {} to {}.".format(
                 self.fullname, self._energy, value))
         self._energy = value
         if self._energy < 1:
