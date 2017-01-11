@@ -12,7 +12,7 @@ class Student(Person):
         super().__init__(first_name, last_name, year_of_birth, gender)
 
     def __str__(self):
-        return self.last_name + " " + self.first_name
+        return self.fullname
 
     @property
     def energy(self):
@@ -29,6 +29,7 @@ class Student(Person):
             for i in range(len(Student.students)):
                 if Student.students[i].fullname == self.fullname:
                     Student.students.remove(Student.students[i])
+                    break
 
     @classmethod
     def create_by_csv(cls, filename):
@@ -51,12 +52,3 @@ class Student(Person):
                 return obj
             else:
                 raise CodecoolError(full_name + " wasn't found in students.")
-
-
-laci = Student("Laci", "Kovács", 1999, "male", 100)
-laci.energy += 1
-print("fasz")
-laci.energy += 1
-laci.energy += 1
-print(laci.energy)
-print(laci._energy)

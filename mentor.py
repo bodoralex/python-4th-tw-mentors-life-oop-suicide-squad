@@ -10,6 +10,9 @@ class Mentor(Person):
         super().__init__(
             first_name, last_name, year_of_birth, gender)
 
+    def __str__(self):
+        return self.fullname
+
     @classmethod
     def find_mentor_by_full_name(cls, full_name):
         for obj in cls.mentors:
