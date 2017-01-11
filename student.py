@@ -7,9 +7,9 @@ class Student(Person):
     students = []
 
     def __init__(self, first_name, last_name, year_of_birth, gender, knowledge_level):
-        self.knowledge_level = knowledge_level
         self._energy = 100
         super().__init__(first_name, last_name, year_of_birth, gender)
+        self._knowledge_level = knowledge_level
 
     def __str__(self):
         return self.fullname
@@ -26,6 +26,20 @@ class Student(Person):
         self._energy = value
         if self._energy < 1:
             print(self.fullname, "exhausted fatally.")
+            self.kill()
+
+    @property
+    def knowledge_level(self):
+        return self._knowledge_level
+
+    @knowledge_level.setter
+    def knowledge_level(self, value):
+        if value != 100:
+            print("{}'s knowledge level changed from {} to {}.".format(
+                self.fullname, self._knowledge_level, value))
+        self._knowledge_level = value
+        if self._knowledge_level < 1:
+            print(self.fullname, "became so stupid that a blackhole formed inside his brain and vanished.")
             self.kill()
 
     @classmethod
