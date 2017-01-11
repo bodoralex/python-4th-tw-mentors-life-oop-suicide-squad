@@ -5,7 +5,7 @@ from codecool_class import CodecoolClass
 import random
 
 
-class JusticeDepatrment:
+class JusticeDepartment:
 
     @classmethod
     def random_punishment(cls, persons):
