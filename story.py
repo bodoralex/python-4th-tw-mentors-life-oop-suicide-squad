@@ -11,4 +11,3 @@ JusticeDepartment(late_student)
 Leraning.morning_dojo(codecool_msc)
 NaturalDiasaster(codecool_msc)
 late_students = MorningRoutine(codecool_msc)
-"""

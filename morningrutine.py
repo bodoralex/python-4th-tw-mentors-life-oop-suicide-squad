@@ -11,9 +11,11 @@ class MorningRoutine:
 
     @classmethod
     def random_things(cls, persons):
+        late_students = []
         for person in persons:
             is_unlucky = random.randint(0, 1)
             if is_unlucky:
+                late_students.append(person)
                 accident = 1  # random.randint(0, 3)
                 if accident == 0:
                     cls.meets_ex_on_tram(person)
@@ -30,6 +32,7 @@ class MorningRoutine:
                 person.energy = 9001
             else:
                 person.energy = 100
+        return late_students
 
     @classmethod
     def meets_ex_on_tram(cls, person):
