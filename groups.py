@@ -7,6 +7,7 @@ class Pair:
 
     @classmethod
     def create_pairs(cls, persons):
+        mentor_in_pairs = False
         pairs_to_instantiate = []
         for student in persons.students:
             pairs_to_instantiate.append(student)
@@ -16,7 +17,13 @@ class Pair:
         if len(pairs_to_instantiate) == 1:
             pairs_to_instantiate.append(persons.mentors[0])
             Pair.pairs.append(Pair(pairs_to_instantiate))
-        return Pair.pairs
+            mentor_in_pairs = True
+        if mentor_in_pairs:
+            print("{} teams gathered, and {} mentor involved to complete a pair.".format(
+                len(cls.pairs), persons.mentors[0].nickname))
+        else:
+            print("{} teams gathered".format(len(cls.pairs)))
+        return cls.pairs
 
 
 """class Group:
