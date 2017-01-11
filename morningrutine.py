@@ -13,10 +13,10 @@ class MorningRoutine:
     def random_things(cls, persons):
         late_students = []
         for person in persons:
-            is_unlucky = random.randint(0, 1)
-            if is_unlucky:
+            is_unlucky = random.randint(0, 2)
+            if is_unlucky == 2:
                 late_students.append(person)
-                accident = 2  # random.randint(0, 3)
+                accident = random.randint(0, 2)
                 if accident == 0:
                     cls.meets_ex_on_tram(person)
                 elif accident == 1:
@@ -26,7 +26,7 @@ class MorningRoutine:
                 elif accident == 3:
                     # kibicsaklik
                     pass
-            elif not is_unlucky and random.randint(1, 10) <= 10:
+            elif not is_unlucky and random.randint(1, 10) >= 8:
                 print(person.fullname, "listened to a podcast on the way to school.")
                 podcast = 30 + random.randint(-10, 10)
                 person.knowledge_level += podcast
@@ -68,5 +68,5 @@ class MorningRoutine:
 
         person.energy -= 50 + random.randint(-10, 10)
 
-kisclass = [Student("Laci", "Kovacs", 1992, "male", 11)]
-print(MorningRoutine.random_things(kisclass))
+"""codecool_msc = CodecoolClass.create_local()
+print(MorningRoutine.random_things(codecool_msc.students))"""
