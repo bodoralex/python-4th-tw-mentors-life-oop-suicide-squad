@@ -8,12 +8,10 @@ from justicedepartment import JusticeDepatrment
 codecool_msc = CodecoolClass.create_local()
 
 late_students = MorningRoutine.random_things(codecool_msc.students)
-JusticeDepatrment.random_punishment(late_students)
-"""
-JusticeDepartment(late_student)
-Leraning.morning_dojo(codecool_msc)"""
+JusticeDepartment.random_punishment(late_students)
 NaturalDiasaster.random_disasters(codecool_msc.students)
 """
-Leraning.morning_dojo(codecool_msc)
-NaturalDiasaster(codecool_msc)
+Learning.morning_dojo(codecool_msc)
+Break.x(codecool_msc.students)
+Group.x(codecool_msc.students)
 late_students = MorningRoutine(codecool_msc)"""
