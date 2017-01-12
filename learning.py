@@ -6,7 +6,23 @@ import random
 
 
 class Learning:
-    # pair programming
+
+    @classmethod
+    def pair_programming(cls, pairs):
+        max_improvement = 0
+        best_pair = None
+        for pair in pairs:
+            knowlegde_adjust = random.randint(15, 40)
+            if max_improvement < knowlegde_adjust:
+                max_improvement = knowlegde_adjust
+                best_pair = pair
+            energy_adjust = random.randint(10, 30)
+            for person in pair.members:
+                person._knowledge_level += knowlegde_adjust
+                person._energy += energy_adjust
+        print("While pair programming the most improved pair was {} and {}.\n\
+         Their knowledge levels was increased by {}.".format(best_pair.members[0], best_pair.members[1], max_improvement))
+        # mentors knowledge
 
     @classmethod
     def morning_dojo(cls, persons):
@@ -25,7 +41,6 @@ class Learning:
                     cls.question_four(person)
             else:
                 person._knowledge_level += 5 + random.randint(0, 10)
-                # mass
         print("All the other students gain some knowledge.")
 
     @classmethod
