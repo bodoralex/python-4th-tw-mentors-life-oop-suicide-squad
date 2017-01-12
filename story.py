@@ -20,6 +20,7 @@ Breaks.random_breaks(codecool_msc.students)
 NaturalDiasaster.random_disasters(codecool_msc.students)
 
 """
-NaturalDiasaster(codecool_msc)
-late_students = MorningRoutine(codecool_msc)
+Leraning.morning_dojo(codecool_msc)
+Breaks.random_breaks(codecool_msc.students)
+NaturalDiasaster.random_disasters(codecool_msc.students)
 """

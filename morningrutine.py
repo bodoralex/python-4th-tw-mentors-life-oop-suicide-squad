@@ -45,7 +45,7 @@ class MorningRoutine:
 
     @classmethod
     def hangover(cls, person):
-        print("{} is hangover, {} will be punished.".format(
+        print("{} is hungover, {} will be punished.".format(
             person.fullname, person.it()))
         person.energy -= 30 + random.randint(-5, 20)
 

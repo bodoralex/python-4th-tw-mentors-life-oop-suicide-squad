@@ -23,8 +23,10 @@ class Learning:
                     person._knowledge_level += knowlegde_adjust
                 if hasattr(person, "_energy"):
                     person._energy += energy_adjust
-        print("While pair programming the most improved pair was {} and {}.\n\
-Their knowledge levels was increased by {}.".format(best_pair.members[0], best_pair.members[1], max_improvement))
+        print("While pair programming the most improved pair was {} and {}.".format(
+            colors['PURPLE'] + str(best_pair.members[0]) + colors['END'], colors['PURPLE'] + str(best_pair.members[1]) + colors['BLUE']))
+        print("Their knowledge levels were increased by {}.".format(
+            colors['RED'] + str(max_improvement) + colors['END']))
         # mentors knowledge
 
     @classmethod
