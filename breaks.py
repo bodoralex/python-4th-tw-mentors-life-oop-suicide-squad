@@ -12,7 +12,7 @@ class Breaks:
 
         for student in persons.students:
             cls.lunch_break(student)
-        print("The class average energy became",
+        print("The lunchbreak is done, the class average energy became",
               CodecoolClass.avg_energy(persons, "notnull"))
 
     @classmethod
@@ -35,10 +35,10 @@ class Breaks:
 
     @classmethod
     def coffee_break(cls, person):
-        print(person.fullname, "Go to the kitchen to drink a coffee.")
+        print(person.fullname, "goes to the kitchen to drink a coffee.")
         person.energy += 15
 
     @classmethod
     def pee_break(cls, person):
-        print(person.fullname, "Uhh, I have to go to the toilett.")
+        print(person.fullname, ": uhh, I have to go to the toilett.")
         person.energy += 7

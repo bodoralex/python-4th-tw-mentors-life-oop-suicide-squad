@@ -39,7 +39,7 @@ class CodecoolClass:
         if p != 0:
             return avg_energy_
         else:
-            return "The class's averange energy is" + str(avg_energy_)
+            return "The class's averange energy is " + str(avg_energy_)
 
     def avg_knowledge(self, p=0):
         skill_sum = 0
@@ -49,7 +49,7 @@ class CodecoolClass:
         if p != 0:
             return avg_knowledge_
         else:
-            return "The class's averange skill is" + str(avg_knowledge_)
+            return "The class's averange skill is " + str(avg_knowledge_)
 
     @classmethod
     def create_local(cls):
