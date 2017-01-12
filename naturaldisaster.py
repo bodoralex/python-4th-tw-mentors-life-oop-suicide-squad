@@ -7,8 +7,8 @@ class NaturalDiasaster:
     @classmethod
     def random_disasters(cls, persons):
         for person in persons:
-            is_very_unlucky = random.randint(0, 3)
-            if is_very_unlucky == 0:
+            is_very_unlucky = random.randint(1, 10)
+            if is_very_unlucky <= 2:
                 disaster = random.randint(0, 4)
                 if disaster == 0:
                     cls.earthquake(person)
@@ -20,7 +20,7 @@ class NaturalDiasaster:
                     cls.no_wifi(person)
                 elif disaster == 4:
                     cls.pipe_burst(person)
-            elif is_very_unlucky > 0:
+            elif is_very_unlucky >= 9:
                 print(person.fullname, "enjoyed the shining sun and became empowered.")
                 person.energy += 30 + random.randint(-10, 10)
 
@@ -36,7 +36,6 @@ class NaturalDiasaster:
 
     @classmethod
     def out_of_coffee(cls, person):
-        print(person.fullname, "ran out of coffee and could hardly keep his.")
         if person.gender == "male":
             print(person.fullname, "ran out of coffee and could hardly keep his eyes open.")
         if person.gender == "female":
