@@ -1,15 +1,12 @@
 from person import Person
 from student import Student
-
-
 import random
 
 
 class MorningRoutine:
 
-    # villamos ex, ballábbal felkelés, késés
 
-    @classmethod
+@classmethod
     def random_things(cls, persons):
         late_students = []
         for person in persons:
@@ -58,12 +55,7 @@ class MorningRoutine:
     def meets_ex_on_tram(cls, person):
         print("{} met {} ex on the tram".format(
             person.fullname, person.its()))
-        """if person.gender == "male":
-            print(person.fullname, "met his ex on the tram.")
-        if person.gender == "female":
-            print(person.fullname, "met her ex on the tram.")
-        if person.gender == "notsure":
-            print(person.fullname, "met its ex on the tram.")"""
+
         person.energy -= 33 + random.randint(-10, 10)
 
     @classmethod
@@ -76,14 +68,5 @@ class MorningRoutine:
     def twisted_ankle(cls, person):
         print("{} twisted {} ankle on {} way to shcool".format(
             person.fullname, person.its(), person.its()))
-        """if person.gender == "male":
-            print(person.fullname, "twisted his ankle on his way to school.")
-        if person.gender == "female":
-            print(person.fullname, "twisted her ankle on her way to school.")
-        if person.gender == "notsure":
-            print(person.fullname, "twisted its ankle on its way to school.")"""
 
         person.energy -= 50 + random.randint(-10, 10)
-
-"""codecool_msc = CodecoolClass.create_local()
-print(MorningRoutine.random_things(codecool_msc.students))"""
