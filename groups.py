@@ -19,7 +19,7 @@ class Pair:
             cls.pairs.append(Pair(pairs_to_instantiate))
             mentor_in_pairs = True
         if mentor_in_pairs:
-            print("{} teams gathered, and {} mentor involved to complete a pair.".format(
+            print("{} teams gathered, and {} mentor was involved to complete a pair.".format(
                 len(cls.pairs), persons.mentors[0].nickname))
         else:
             print("{} teams gathered".format(len(cls.pairs)))

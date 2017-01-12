@@ -1,5 +1,19 @@
 from person import Person
 from codecoolerror import CodecoolError
+import color
+from color import colors
+
+# színek printeléshez
+PURPLE = '\033[95m'
+CYAN = '\033[96m'
+DARKCYAN = '\033[36m'
+BLUE = '\033[94m'
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+RED = '\033[91m'
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
+END = '\033[0m'
 
 
 class Student(Person):
@@ -21,8 +35,8 @@ class Student(Person):
     @energy.setter
     def energy(self, value):
         if value != 100:
-            print("{}'s energy changed from {} to {}.".format(
-                self.fullname, self._energy, value))
+            print(colors['YELLOW'] + "{}'s energy changed from {} to {}.".format(
+                self.fullname, self._energy, value) + colors['END'])
         self._energy = value
         if self._energy < 1:
             print(self.fullname, "exhausted fatally.")
@@ -35,8 +49,8 @@ class Student(Person):
     @knowledge_level.setter
     def knowledge_level(self, value):
         if value != 100:
-            print("{}'s knowledge level changed from {} to {}.".format(
-                self.fullname, self._knowledge_level, value))
+            print(colors['BLUE'] + "{}'s knowledge level changed from {} to {}.".format(
+                self.fullname, self._knowledge_level, value) + colors['END'])
         self._knowledge_level = value
         if self._knowledge_level < 1:
             print(
@@ -53,7 +67,7 @@ class Student(Person):
             cls.students.append(Student(first_name, last_name, int(
                 year_of_birth), gender, int(knowledge_level)))
         file.close()
-        print("Students are initialized from csv")
+        print(colors['GREEN'] + "Students are initialized from csv." + colors['END'])
         return cls.students
 
     @classmethod
