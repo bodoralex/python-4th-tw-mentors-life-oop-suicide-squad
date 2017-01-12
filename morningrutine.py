@@ -15,8 +15,7 @@ class MorningRoutine:
         for person in persons:
             is_unlucky = random.randint(0, 2)
             if is_unlucky == 2:
-                late_students.append(person)
-                accident = random.randint(0, 2)
+                accident = random.randint(0, 3)
                 if accident == 0:
                     cls.meets_ex_on_tram(person)
                 elif accident == 1:
@@ -24,8 +23,12 @@ class MorningRoutine:
                 elif accident == 2:
                     cls.twisted_ankle(person)
                 elif accident == 3:
-                    # kibicsaklik
-                    pass
+                    late_students.append(person)
+                    cls.oversleep(person)
+                elif accident == 4:
+                    late_students.append(person)
+                    cls.hangover(person)
+
             elif not is_unlucky and random.randint(1, 10) >= 8:
                 print(person.fullname, "listened to a podcast on the way to school.")
                 podcast = 30 + random.randint(-10, 10)
@@ -39,14 +42,28 @@ class MorningRoutine:
         return late_students
 
     @classmethod
-    def meets_ex_on_tram(cls, person):
+    def hangover(cls, person):
+        print("{} is hangover, {} will be punished.".format(
+            person.fullname, person.it()))
+        person.energy -= 30 + random.randint(-5, 20)
 
-        if person.gender == "male":
+    @classmethod
+    def oversleep(cls, person):
+        print("{} didn't want to wake up in time, {} will be more energized, but {} will be punished too.".format(
+            person.fullname, person.it(), person.it()))
+        person.energy += 20 + random.randint(5, 10)
+        person.knowledge_level -= 2 + random.randint(-5, 5)
+
+    @classmethod
+    def meets_ex_on_tram(cls, person):
+        print("{} met {} ex on the tram".format(
+            person.fullname, person.its()))
+        """if person.gender == "male":
             print(person.fullname, "met his ex on the tram.")
         if person.gender == "female":
             print(person.fullname, "met her ex on the tram.")
         if person.gender == "notsure":
-            print(person.fullname, "met its ex on the tram.")
+            print(person.fullname, "met its ex on the tram.")"""
         person.energy -= 33 + random.randint(-10, 10)
 
     @classmethod
@@ -57,12 +74,14 @@ class MorningRoutine:
 
     @classmethod
     def twisted_ankle(cls, person):
-        if person.gender == "male":
+        print("{} twisted {} ankle on {} way to shcool".format(
+            person.fullname, person.its(), person.its()))
+        """if person.gender == "male":
             print(person.fullname, "twisted his ankle on his way to school.")
         if person.gender == "female":
             print(person.fullname, "twisted her ankle on her way to school.")
         if person.gender == "notsure":
-            print(person.fullname, "twisted its ankle on its way to school.")
+            print(person.fullname, "twisted its ankle on its way to school.")"""
 
         person.energy -= 50 + random.randint(-10, 10)
 

@@ -24,3 +24,19 @@ class Person:
     @property
     def fullname(self):
         return "{} {}".format(self.first_name, self.last_name)
+
+    def its(self):
+        if self.gender == "male":
+            return "his"
+        elif self.gender == "female":
+            return "her"
+        else:
+            return "its"
+
+    def it(self):
+        if self.gender == "male":
+            return "he"
+        elif self.gender == "female":
+            return "she"
+        else:
+            return "it"
