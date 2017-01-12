@@ -49,8 +49,8 @@ class Student(Person):
     @knowledge_level.setter
     def knowledge_level(self, value):
         if value != 100:
-            print(colors['BLUE'] + "{}'s knowledge level changed from {} to {}.".format(
-                self.fullname, self._knowledge_level, value) + colors['END'])
+            print(colors['BLUE'] + "{}'s knowledge level changed from {} to {}.".format(colors['RED'] +
+                                                                                        self.fullname + colors['BLUE'], colors['RED'] + str(self._knowledge_level) + colors['BLUE'], colors['RED'] + str(value) + colors['BLUE']) + colors['END'])
         self._knowledge_level = value
         if self._knowledge_level < 1:
             print(self.fullname, "became so stupid that a blackhole formed inside his brain and vanished.")

@@ -28,20 +28,20 @@ class Learning:
 
     @classmethod
     def question_one(cls, person):
-        print(person.fullname, "wrote a lamba function .")
+        print(person.fullname, "wrote a lamba function.")
         person.knowledge_level += 20
 
     @classmethod
     def question_two(cls, person):
-        print(person.fullname, "was made some exercises")
+        print(person.fullname, "did some exercises.")
         person.knowledge_level += 25
 
     @classmethod
     def question_three(cls, person):
-        print(person.fullname, "refactoreted a program")
+        print(person.fullname, "refactoreted a program.")
         person.knowledge_level += 40
 
     @classmethod
     def question_four(cls, person):
-        print(person.fullname, "wrote a cool application")
+        print(person.fullname, "wrote a cool application.")
         person.knowledge_level += 30
