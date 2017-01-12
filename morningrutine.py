@@ -31,8 +31,10 @@ class MorningRoutine:
                 person.knowledge_level += podcast
 
             elif random.randint(1, 10) == 10:
-                print(person.fullname, "became a super saiyan.")
+                print(person.fullname,
+                      "had a great sleep and became a super saiyan.")
                 person.energy = 9001
+                person.knowledge_level += 30 + random.randint(0, 10)
             else:
                 person.energy = 100
         return late_students
