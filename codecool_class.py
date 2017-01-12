@@ -16,6 +16,9 @@ class CodecoolClass:
         except:
             raise CodecoolError
 
+    """def get_avg_energy(self):
+        return "The class's averange energy is {}".format()"""
+
     def find_mentor_by_full_name(self, full_name):
         for obj in self.mentors:
             if obj.fullname == full_name:
@@ -28,18 +31,25 @@ class CodecoolClass:
                 print(full_name, "was found in mentors")
                 return obj
 
-    def avg_energy(self):
+    def avg_energy(self, p=0):
         energy_sum = 0
         for student in self.students:
             energy_sum += student.energy
+        avg_energy_ = round(energy_sum / len(self.students), 2)
+        if p != 0:
+            return avg_energy_
+        else:
+            return "The class's averange energy is" + str(avg_energy_)
 
-        return round(energy_sum / len(self.students), 2)
-
-    def avg_knowledge(self):
+    def avg_knowledge(self, p=0):
         skill_sum = 0
         for student in self.students:
-            sklii_sum += student.knowledge_level
-        return round(skill_sum / len(self.students), 2)
+            skill_sum += student.knowledge_level
+        avg_knowledge_ = round(skill_sum / len(self.students), 2)
+        if p != 0:
+            return avg_knowledge_
+        else:
+            return "The class's averange skill is" + str(avg_knowledge_)
 
     @classmethod
     def create_local(cls):

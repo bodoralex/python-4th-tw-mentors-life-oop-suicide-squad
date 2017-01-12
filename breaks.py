@@ -13,12 +13,12 @@ class Breaks:
         for student in persons.students:
             cls.lunch_break(student)
         print("The class average energy became",
-              CodecoolClass.avg_energy(persons))
+              CodecoolClass.avg_energy(persons, "notnull"))
 
     @classmethod
     def random_breaks(cls, persons):
         for person in persons:
-            breaks = random.randint(0, 3)
+            breaks = random.randint(0, 5)
             if breaks == 0:
                 szunet = random.randint(1, 2)
                 if szunet == 0:
