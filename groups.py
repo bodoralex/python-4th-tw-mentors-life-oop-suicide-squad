@@ -12,11 +12,11 @@ class Pair:
         for student in persons.students:
             pairs_to_instantiate.append(student)
             if len(pairs_to_instantiate) == 2:
-                Pair.pairs.append(Pair(pairs_to_instantiate))
+                cls.pairs.append(Pair(pairs_to_instantiate))
                 pairs_to_instantiate.clear()
         if len(pairs_to_instantiate) == 1:
             pairs_to_instantiate.append(persons.mentors[0])
-            Pair.pairs.append(Pair(pairs_to_instantiate))
+            cls.pairs.append(Pair(pairs_to_instantiate))
             mentor_in_pairs = True
         if mentor_in_pairs:
             print("{} teams gathered, and {} mentor involved to complete a pair.".format(

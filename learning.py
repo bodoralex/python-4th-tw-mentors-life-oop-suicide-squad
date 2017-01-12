@@ -12,7 +12,7 @@ class Learning:
     def morning_dojo(cls, persons):
         print("A morning dojo started with {} students.".format(len(persons)))
         for person in persons:
-            questions = random.randint(0, 2)
+            questions = random.randint(0, 3)
             if questions == 0:
                 question = random.randint(0, 4)
                 if question == 0:
@@ -21,10 +21,12 @@ class Learning:
                     cls.question_two(person)
                 elif question == 2:
                     cls.question_three(person)
-                elif question == 2:
+                elif question == 3:
                     cls.question_four(person)
             else:
-                person.knowledge_level += 5 + random.randint(0, 10)
+                person._knowledge_level += 5 + random.randint(0, 10)
+                # mass
+        print("All the other students gain some knowledge.")
 
     @classmethod
     def question_one(cls, person):

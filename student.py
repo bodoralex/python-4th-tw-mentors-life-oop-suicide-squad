@@ -39,7 +39,8 @@ class Student(Person):
                 self.fullname, self._knowledge_level, value))
         self._knowledge_level = value
         if self._knowledge_level < 1:
-            print(self.fullname, "became so stupid that a blackhole formed inside his brain and vanished.")
+            print(
+                self.fullname, "became so stupid that a blackhole formed inside his brain and vanished.")
             self.kill()
 
     @classmethod
