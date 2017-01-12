@@ -1,6 +1,20 @@
 from mentor import Mentor
 from student import Student
 from codecoolerror import CodecoolError
+import color
+from color import colors
+
+# színek printeléshez
+PURPLE = '\033[95m'
+CYAN = '\033[96m'
+DARKCYAN = '\033[36m'
+BLUE = '\033[94m'
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+RED = '\033[91m'
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
+END = '\033[0m'
 
 
 class CodecoolClass:
@@ -31,8 +45,8 @@ class CodecoolClass:
         mentors = Mentor.create_by_csv("data/mentors.csv")
         students = Student.create_by_csv("data/students.csv")
         cc_object = CodecoolClass("Miskolc", 2017, mentors, students)
-        print("School @ Miskolc, in year 2017 is created, with {} mentors and {} students".format(
-            len(mentors), len(students)))
+        print(colors['GREEN'] + "School @ Miskolc, in year 2017 is created, with {} mentors and {} students.".format(
+            len(mentors), len(students)) + colors['END'])
         return cc_object
 
 #ccclass = CodecoolClass.create_local()

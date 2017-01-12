@@ -56,7 +56,7 @@ class MorningRoutine:
 
     @classmethod
     def meets_ex_on_tram(cls, person):
-        print("{} met {} ex on the tram".format(
+        print("{} met {} ex on the tram.".format(
             person.fullname, person.its()))
 
         person.energy -= 33 + random.randint(-10, 10)

@@ -66,7 +66,7 @@ class Student(Person):
             cls.students.append(Student(first_name, last_name, int(
                 year_of_birth), gender, int(knowledge_level)))
         file.close()
-        print("Students are initialized from csv")
+        print(colors['GREEN'] + "Students are initialized from csv." + colors['END'])
         return cls.students
 
     @classmethod
