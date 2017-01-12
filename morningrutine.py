@@ -5,8 +5,7 @@ import random
 
 class MorningRoutine:
 
-
-@classmethod
+    @classmethod
     def random_things(cls, persons):
         late_students = []
         for person in persons:
