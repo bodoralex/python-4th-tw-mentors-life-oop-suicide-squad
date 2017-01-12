@@ -35,11 +35,11 @@ class Student(Person):
     @energy.setter
     def energy(self, value):
         if value != 100:
-            print(colors['YELLOW'] + "{}'s energy changed from {} to {}.".format(
-                self.fullname, self._energy, value) + colors['END'])
+            print(colors['YELLOW'] + "{}'s energy changed from {} to {}.".format(colors['PURPLE'] +
+                                                                                 self.fullname + colors['YELLOW'], colors['RED'] + str(self._energy) + colors['YELLOW'], colors['RED'] + str(value) + colors['YELLOW']) + colors['END'])
         self._energy = value
         if self._energy < 1:
-            print(self.fullname, "exhausted fatally.")
+            print(colors['PURPLE'] + self.fullname + colors['RED'], "exhausted fatally.")
             self.kill()
 
     @property
@@ -49,8 +49,8 @@ class Student(Person):
     @knowledge_level.setter
     def knowledge_level(self, value):
         if value != 100:
-            print(colors['BLUE'] + "{}'s knowledge level changed from {} to {}.".format(
-                self.fullname, self._knowledge_level, value) + colors['END'])
+            print(colors['BLUE'] + "{}'s knowledge level changed from {} to {}.".format(colors['PURPLE'] +
+                                                                                        self.fullname + colors['BLUE'], colors['RED'] + str(self._knowledge_level) + colors['BLUE'], colors['RED'] + str(value) + colors['BLUE']) + colors['END'])
         self._knowledge_level = value
         if self._knowledge_level < 1:
             print(

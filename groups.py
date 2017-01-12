@@ -1,3 +1,19 @@
+import color
+from color import colors
+
+# színek printeléshez
+PURPLE = '\033[95m'
+CYAN = '\033[96m'
+DARKCYAN = '\033[36m'
+BLUE = '\033[94m'
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+RED = '\033[91m'
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
+END = '\033[0m'
+
+
 class Pair:
 
     pairs = []
@@ -19,10 +35,10 @@ class Pair:
             cls.pairs.append(Pair(pairs_to_instantiate))
             mentor_in_pairs = True
         if mentor_in_pairs:
-            print("{} teams gathered, and {} mentor was involved to complete a pair.".format(
-                len(cls.pairs), persons.mentors[0].nickname))
+            print(colors['GREEN'] + "{} pairs gathered, and {} mentor was involved to complete a pair.".format(
+                len(cls.pairs), persons.mentors[0].nickname) + colors['END'])
         else:
-            print("{} teams gathered".format(len(cls.pairs)))
+            print(colors['GREEN'] + "{} pairs gathered.".format(len(cls.pairs)) + colors['END'])
         return cls.pairs
 
 
