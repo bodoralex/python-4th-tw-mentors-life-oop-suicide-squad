@@ -1,6 +1,8 @@
 from person import Person
 from student import Student
 import random
+import color
+from color import colors
 
 
 class MorningRoutine:
@@ -34,7 +36,7 @@ class MorningRoutine:
 
                 elif random.randint(1, 10) == 10:
                     print(person.fullname,
-                          "had a great sleep and became a super saiyan.")
+                          "had a great sleep and became a " + colors['YELLOW'] + colors['BOLD'] + "SUPER SAIYAN." + colors['END'])
                     person.energy = 9001
                     person.knowledge_level += 30 + random.randint(0, 10)
                 else:

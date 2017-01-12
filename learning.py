@@ -1,8 +1,9 @@
 from person import Person
 from student import Student
 from codecool_class import CodecoolClass
-
 import random
+import color
+from color import colors
 
 
 class Learning:
@@ -28,7 +29,7 @@ class Learning:
 
     @classmethod
     def morning_dojo(cls, persons):
-        print("A morning dojo started with {} students.".format(len(persons)))
+        print(colors['GREEN'] + "A morning dojo started with {} students.".format(len(persons)) + colors['END'])
         for person in persons:
             questions = random.randint(0, 3)
             if questions == 0:
