@@ -19,17 +19,18 @@ class Learning:
                 best_pair = pair
             energy_adjust = random.randint(10, 30)
             for person in pair.members:
-                if hasattr(person, _knowledge_level):
+                if hasattr(person, "_knowledge_level"):
                     person._knowledge_level += knowlegde_adjust
-                if hasattr(person, _energy):
+                if hasattr(person, "_energy"):
                     person._energy += energy_adjust
         print("While pair programming the most improved pair was {} and {}.\n\
-         Their knowledge levels was increased by {}.".format(best_pair.members[0], best_pair.members[1], max_improvement))
+Their knowledge levels was increased by {}.".format(best_pair.members[0], best_pair.members[1], max_improvement))
         # mentors knowledge
 
     @classmethod
     def morning_dojo(cls, persons):
-        print(colors['GREEN'] + "A morning dojo started with {} students.".format(len(persons)) + colors['END'])
+        print(colors[
+              'GREEN'] + "A morning dojo started with {} students.".format(len(persons)) + colors['END'])
         for person in persons:
             questions = random.randint(0, 3)
             if questions == 0:
@@ -53,7 +54,7 @@ class Learning:
 
     @classmethod
     def question_two(cls, person):
-        print(person.fullname, "did some exercises.")
+        print(person.fullname, "did a good practice.")
         person.knowledge_level += 25
 
     @classmethod
