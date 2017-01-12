@@ -69,7 +69,7 @@ class MorningRoutine:
 
     @classmethod
     def twisted_ankle(cls, person):
-        print("{} twisted {} ankle on {} way to shcool".format(
+        print("{} twisted {} ankle on {} way to shcool.".format(
             person.fullname, person.its(), person.its()))
 
         person.energy -= 50 + random.randint(-10, 10)
