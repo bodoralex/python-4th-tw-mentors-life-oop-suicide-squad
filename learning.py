@@ -6,6 +6,7 @@ import random
 
 
 class Learning:
+    # pair programming
 
     @classmethod
     def morning_dojo(cls, persons):
