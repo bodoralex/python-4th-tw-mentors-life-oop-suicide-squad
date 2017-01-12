@@ -9,10 +9,10 @@ class MorningRoutine:
     def random_things(cls, persons):
         late_students = []
         for person in persons:
-            if random.randint(0, 1) == 1:
+            if random.randint(0, 2) == 1:
                 is_unlucky = random.randint(0, 2)
                 if is_unlucky == 2:
-                    accident = random.randint(0, 3)
+                    accident = random.randint(0, 4)
                     if accident == 0:
                         cls.meets_ex_on_tram(person)
                     elif accident == 1:
