@@ -9,8 +9,6 @@ class JusticeDepartment:
 
     @classmethod
     def random_punishment(cls, persons):
-        # lista, fekvő, tökönrúgás, lefejezés
-
         for person in persons[::-1]:
             punishment_factor = random.randint(0, 100)
             print("{}'s punishment is: ".format(person.fullname), end="")
@@ -36,14 +34,3 @@ class JusticeDepartment:
     def pushups(cls, person):
         print("pushups")
         person.energy -= 15 + random.randint(0, 10)
-
-
-def main():
-
-    codecool_msc = CodecoolClass.create_local()
-    #kisclass = [Student("Laci", "Kovacs", 1992, "male", 11)]
-    JusticeDepatrment.random_punishment(codecool_msc.students)
-
-
-if __name__ == "main":
-    main()

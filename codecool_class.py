@@ -16,9 +16,6 @@ class CodecoolClass:
         except:
             raise CodecoolError
 
-    """def get_avg_energy(self):
-        return "The class's averange energy is {}".format()"""
-
     def find_mentor_by_full_name(self, full_name):
         for obj in self.mentors:
             if obj.fullname == full_name:

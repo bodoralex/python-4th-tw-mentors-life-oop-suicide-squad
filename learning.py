@@ -10,6 +10,7 @@ class Learning:
 
     @classmethod
     def pair_programming(cls, pairs):
+        print("A pair programming dojo starts...")
         max_improvement = 0
         best_pair = None
         for pair in pairs:
@@ -27,7 +28,6 @@ class Learning:
             colors['PURPLE'] + str(best_pair.members[0]) + colors['END'], colors['PURPLE'] + str(best_pair.members[1]) + colors['BLUE']))
         print("Their knowledge levels were increased by {}.".format(
             colors['RED'] + str(max_improvement) + colors['END']))
-        # mentors knowledge
 
     @classmethod
     def morning_dojo(cls, persons):

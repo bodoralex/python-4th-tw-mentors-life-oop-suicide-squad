@@ -18,6 +18,7 @@ class Pair:
             if len(pairs_to_instantiate) == 2:
                 cls.pairs.append(Pair(pairs_to_instantiate))
                 pairs_to_instantiate.clear()
+
         if len(pairs_to_instantiate) == 1:
             pairs_to_instantiate.append(persons.mentors[0])
             cls.pairs.append(Pair(pairs_to_instantiate))

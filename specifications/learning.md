@@ -1,36 +1,39 @@
-# CodecoolClass
+# Learning
 
-Implemented by Bodor Alex
+Implemeted by Horváth Fruzsina Enikő
 
 ## Description
-This class represents a real class @ Codecool, containing mentors and students working at the class.
+This class represents the way of the learning in the Codecool.
 
-## Parent class
-None
-
-## Attributes
-
-* ```location```
-  * data type: string
-  * description: stores the city where the the class started
-* ```year```
-  * data type: integer
-  * description: stores the year when the class started
-* ```mentors```
-   * data type: list (containing Mentor objects)
-   * description: stores the mentors of the class
-* ```students```
-  * data type: list (containing Student objects)
-  * description: stores the students of the class
 
 ## Class methods
 
-### ```generate_local```
+### ```morning_dojo```
 
-Creates a ```CodecoolClass``` object having some real-life data from the implementer students' real class.
+Randomly picks a "question_..." classdefinition to every person in the list. 
 
 #### Arguments
+
+* ```persons```
+  * data_type: list
+  * description: must contains student objects
+
+#### Return value
+
 None
+
+### ```question/_one```
+### ```question/_two```
+### ```question/_three```
+### ```question/_four``` ################ nincskész
+
+Randomly picks a "question_..." classdefinition to every person in the list. 
+
+#### Arguments
+
+* ```persons```
+  * data_type: list
+  * description: must contains student objects
 
 #### Return value
 

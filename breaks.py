@@ -9,7 +9,6 @@ class Breaks:
 
     @classmethod
     def mass_lunchbreak(cls, persons):
-
         for student in persons.students:
             cls.lunch_break(student)
         print("The lunchbreak is done, the class average energy became",
@@ -30,7 +29,6 @@ class Breaks:
 
     @classmethod
     def lunch_break(cls, person):
-        #print(person.fullname, "Ohh Yeah! This is lunchtime.")
         person._energy += 30
 
     @classmethod
