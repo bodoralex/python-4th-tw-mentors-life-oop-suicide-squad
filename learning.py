@@ -18,8 +18,10 @@ class Learning:
                 best_pair = pair
             energy_adjust = random.randint(10, 30)
             for person in pair.members:
-                person._knowledge_level += knowlegde_adjust
-                person._energy += energy_adjust
+                if hasattr(person, _knowledge_level):
+                    person._knowledge_level += knowlegde_adjust
+                if hasattr(person, _energy):
+                    person._energy += energy_adjust
         print("While pair programming the most improved pair was {} and {}.\n\
          Their knowledge levels was increased by {}.".format(best_pair.members[0], best_pair.members[1], max_improvement))
         # mentors knowledge
