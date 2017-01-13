@@ -42,7 +42,7 @@ class Student(Person):
         self._knowledge_level = value
         if self._knowledge_level < 1:
             print(colors['RED'] +
-                  str(self.fullname) + "became so stupid that a blackhole formed inside his brain and vanished." + colors['END'])
+                  str(self.fullname) + " became so stupid that a blackhole formed inside his brain and vanished." + colors['END'])
             self.kill()
 
     @classmethod
