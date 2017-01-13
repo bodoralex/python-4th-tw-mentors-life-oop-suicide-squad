@@ -30,7 +30,8 @@ The .csv file need to be formatted like this:
     * description: contains the name of the file
 
 #### Return value
-None
+
+The read and instantiated mentor objects in a list. 
 
 ### ```find_mentor_by_full_name(cls, full_name)```
 
@@ -43,7 +44,10 @@ Find a Mentor object from the full name
     * description: the addition of the first name and the last name. For example: "Laci Juhász"
 
 #### Return value
+
 A mentor object
+
+
 
 ## Instance methods
 
@@ -56,3 +60,19 @@ All of the arguments of the class itself.
 
 #### Return value
 None
+
+    def __str__(self):
+        return self.fullname
+
+## Instance methods
+
+### ```__str__```
+
+
+#### Arguments
+
+None
+
+#### Return value
+
+The parent's fullname method.

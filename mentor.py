@@ -32,10 +32,6 @@ class Mentor(Person):
             cls.mentors.append(Mentor(first_name, last_name,
                                       int(year_of_birth), gender, nickname.strip()))
         file.close()
-        print(colors['GREEN'] + "Mentors are initialized from csv." + colors['END'])
+        print(colors['GREEN'] +
+              "Mentors are initialized from csv." + colors['END'])
         return Mentor.mentors
-
-
-"""Mentor.create_by_csv("data//mentors.csv")
-print(Mentor.mentors)
-mentor_lacika = Mentor.find_mentor_by_full_name("Laci Juhász")"""

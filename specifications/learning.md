@@ -22,67 +22,33 @@ Randomly picks a "question_..." classdefinition to every person in the list.
 
 None
 
-### ```question/_one```
-### ```question/_two```
-### ```question/_three```
-### ```question/_four``` ################ nincskész
+### ```question_one```
+### ```        /_two```
+### ```        /_three```
+### ```        /_four``` 
 
-Randomly picks a "question_..." classdefinition to every person in the list. 
+Add some knowledge to a student object.
 
 #### Arguments
 
 * ```persons```
-  * data_type: list
-  * description: must contains student objects
+  * data_type: student object
 
 #### Return value
 
-```CodecoolClass``` object
-
-
-## Instance methods
-
-### ```__init__```
-The constructor of the object.
-
-#### Arguments
-
-All of the arguments of the class itself.
-
-#### Return value
 None
 
-### ```find_student_by_full_name```
 
-Gives back a student with the same full name as the argument from ```students```
-#### Arguments
-* ```full_name```
-  * data_type: string
-  * description: holds the full name of the student to be found
+### ```pair_programming``` 
 
-#### Return value
-```Student``` object
-
-### ```find_mentor_by_full_name```
-
-#### Arguments
-* ```full_name```
-  * data_type: string
-  * description: holds the full name of the mentor to be found
-
-#### Return value
-```Mentor``` object
-
-
-### ```avg_energy```
-
-#### Return value
-Average of the students's energy in a class.
-
-
-### ```avg_knowledge```
+Pair objects, which contain two student object, make some exercises.
 
 #### Arguments
 
+* ```pairs```
+  * data_type: list
+  * description: the list must contains pair objects
+
 #### Return value
-Average of the students's knowledge in a class.
+
+None
