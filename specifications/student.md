@@ -83,7 +83,49 @@ None
 The Person class's fullname method.
 
 
+### ```energy(getter)```
+
+#### Arguments
+
+None
+
+#### Return value
+
+self._energy
 
 
+### ```energy(setter)```
+
+Follows the energy changes of the student objects.
+
+#### Arguments
+
+Assigment
+
+#### Return value
+
+None
 
 
+### ```knowledge(getter)```
+
+#### Arguments
+
+None
+
+#### Return value
+
+self._knowledge
+
+
+### ```knowledge(setter)```
+
+Follows the knowledge changes of the student objects.
+
+#### Arguments
+
+Assigment
+
+#### Return value
+
+None
