@@ -1,5 +1,7 @@
 # Student
 
+Implemented by Ujfalusi Zsolt
+
 ## Description
 This class represents Codecool students.
 

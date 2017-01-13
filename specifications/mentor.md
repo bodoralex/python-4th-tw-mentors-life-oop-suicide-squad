@@ -1,5 +1,7 @@
 # Mentor
 
+Implemented by Bodor Alex
+
 ## Description
 This class contains the mentors.
 
@@ -46,7 +48,6 @@ Find a Mentor object from the full name
 #### Return value
 
 A mentor object
-
 
 
 ## Instance methods

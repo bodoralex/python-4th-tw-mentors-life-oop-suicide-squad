@@ -1,5 +1,7 @@
 # Person
 
+Implmented by Bodor Alex
+
 ## Description
 This class represents a person.
 

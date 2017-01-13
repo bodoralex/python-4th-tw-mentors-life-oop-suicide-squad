@@ -1,6 +1,6 @@
 # Naturaldisaster
 
-
+Implemented by Ujfalusi Zsolt
 
 ## Description
 This class contains unfortunate events with one exception.
