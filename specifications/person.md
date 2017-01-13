@@ -20,25 +20,8 @@ None
 * ```gender```
   * data type: string
   * description: stores the gender of the person
-* ```energy_level```
-  * data type: int
-  * description: stores the energy level of the person 0 - ∞
-* ```skill_level```
-  * data type: int
-  * description: stores the skill level of the person 0 - 100
 
-## Class methods
 
-### ```class method name here```
-
-description here
-
-#### Arguments
-None
-
-#### Return value
-
-```return value here```
 
 ## Instance methods
 
@@ -69,23 +52,39 @@ first_name (string), last_name (string), year_of_birth (int), gender (string)
 #### Return value
 None
 
-### ```find_student_by_full_name```
 
-Gives back a student with the same full name as the argument from ```students```
-#### Arguments
-* ```full_name```
-  * data_type: string
-  * description: holds the full name of the student to be found
+### ```it```
 
-#### Return value
-```Student``` object
-
-### ```find_mentor_by_full_name```
+Gives back the person's noun.
 
 #### Arguments
-* ```full_name```
-  * data_type: string
-  * description: holds the full name of the mentor to be found
+
+None
 
 #### Return value
-```Mentor``` object
+
+"he", "she", "it" depending on the person's gender.
+
+
+### ```its```
+
+Gives back the person's posessive pronuon.
+
+#### Arguments
+
+None
+
+#### Return value
+
+"his", "her", "its" depending on the person's gender.
+
+
+
+### ```fullname(getter)```
+
+#### Arguments
+
+None
+
+#### Return value
+A string which contains the person's first_name and last_name.
