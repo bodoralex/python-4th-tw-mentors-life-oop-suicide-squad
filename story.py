@@ -22,9 +22,6 @@ def main():
     Learning.pair_programming(coder_pairs)
     print(codecool_msc.avg_knowledge())
     Breaks.mass_lunchbreak(codecool_msc)
-
-    # NaturalDiasaster.earthquake(codecool_msc.students)
-
     NaturalDiasaster.random_disasters(codecool_msc.students)
     print("The day is over and everyone went home, hopefully with more knowledge than at the start of the day.")
 
