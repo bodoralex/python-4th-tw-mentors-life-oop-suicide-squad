@@ -1,5 +1,4 @@
 from person import Person
-from codecoolerror import CodecoolError
 import color
 from color import colors
 
@@ -27,7 +26,8 @@ class Student(Person):
                                                                                  self.fullname + colors['YELLOW'], colors['RED'] + str(self._energy) + colors['YELLOW'], colors['RED'] + str(value) + colors['YELLOW']) + colors['END'])
         self._energy = value
         if self._energy < 1:
-            print(colors['PURPLE'] + self.fullname + colors['RED'], "exhausted fatally.")
+            print(colors['PURPLE'] + self.fullname +
+                  colors['RED'], "exhausted fatally.")
             self.kill()
 
     @property
@@ -55,7 +55,8 @@ class Student(Person):
             cls.students.append(Student(first_name, last_name, int(
                 year_of_birth), gender, int(knowledge_level)))
         file.close()
-        print(colors['GREEN'] + "Students are initialized from csv." + colors['END'])
+        print(colors['GREEN'] +
+              "Students are initialized from csv." + colors['END'])
         return cls.students
 
     @classmethod
@@ -65,11 +66,12 @@ class Student(Person):
                 print(full_name, "was found in students.")
                 return obj
             else:
-                raise CodecoolError(full_name + " wasn't found in students.")
+                raise ValueError(full_name + " wasn't found in students.")
 
     def kill(self):
         for i in range(len(Student.students)):
             if Student.students[i].fullname == self.fullname:
-                print(colors['RED'] + "✝✝✝ " + str(self.fullname) + " died. ✝✝✝" + colors['END'])
+                print(colors['RED'] + "✝✝✝ " +
+                      str(self.fullname) + " died. ✝✝✝" + colors['END'])
                 Student.students.remove(Student.students[i])
                 break

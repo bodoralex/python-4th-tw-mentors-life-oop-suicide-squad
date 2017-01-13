@@ -1,6 +1,5 @@
 from mentor import Mentor
 from student import Student
-from codecoolerror import CodecoolError
 import color
 from color import colors
 
@@ -14,7 +13,7 @@ class CodecoolClass:
             self.mentors = mentors
             self.students = students
         except:
-            raise CodecoolError
+            raise ValueError
 
     def find_mentor_by_full_name(self, full_name):
         for obj in self.mentors:
