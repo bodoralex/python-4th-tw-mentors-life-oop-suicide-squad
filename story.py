@@ -24,6 +24,7 @@ def main():
     print(codecool_msc.avg_energy())
     NaturalDiasaster.random_disasters(codecool_msc.students)
     Breaks.random_breaks(codecool_msc.students)
+    print("The day is over and everyone went home, hopefully with more knowledge than at the start of the day.")
 
 if __name__ == "__main__":
     main()
