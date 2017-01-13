@@ -17,13 +17,15 @@ def main():
     print(codecool_msc.avg_energy())
     print(codecool_msc.avg_knowledge())
     Learning.morning_dojo(codecool_msc.students)
+    Breaks.random_breaks(codecool_msc.students)
     coder_pairs = Pair.create_pairs(codecool_msc)
     Learning.pair_programming(coder_pairs)
     print(codecool_msc.avg_knowledge())
     Breaks.mass_lunchbreak(codecool_msc)
-    print(codecool_msc.avg_energy())
+
+    # NaturalDiasaster.earthquake(codecool_msc.students)
+
     NaturalDiasaster.random_disasters(codecool_msc.students)
-    Breaks.random_breaks(codecool_msc.students)
     print("The day is over and everyone went home, hopefully with more knowledge than at the start of the day.")
 
 if __name__ == "__main__":
